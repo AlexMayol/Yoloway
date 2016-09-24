@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Registro en YOLOWAY - YOLOWAY</title>
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="estilos/principal.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="estilos/768.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/fontello.css">
+	<link rel="stylesheet" type="text/css" href="estilos/fontello-codes.css">
+	<link rel="stylesheet" type="text/css" href="estilos/fontello-embedded.css">
+	<link rel="stylesheet" type="text/css" href="estilos/animate.css">
+	<link rel="stylesheet" type="text/css" href="estilos/animate.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script src="logica/codigo.js"></script>
+</head>
+<body onload="creaMenu();checkRegistrado()">
+<div id="registrado" >
+	<p>¡Registro completado satisfactoriamente!</p>
+	<button onclick="llevarALogin()">¡Hacer login!</button>
+</div>
+<div id="NombreUso" >
+	<p>Ese nombre ya está en uso...</p>
+	<button onclick="intentarDeNuevo2()">Volver a intentar</button>
+</div>
+<div id="passIncorrecta" >
+	<p>¡Las contraseñas no coinciden!</p>
+	<button onclick="intentarDeNuevo()">Volver a intentar</button>
+</div>
+<header>
+	<h1>YOLOWAY</h1>
+	<a href="index.html">
+		<img id="head1" src="img/header2.png" alt="logo">
+		<img id="head2" src="img/logo.png" alt="logo">
+	</a>
+	<div id="cssmenu"></div>
+</header>
+	<form method="get" onsubmit="checkRegistro();return false;">
+		<fieldset>
+			<legend>Registro</legend>
+			 Nombre de usuario<br>
+			<input onkeyup="checkUser()" id="regUsu" type="text" name="nombre" placeholder="tu nombre" required autofocus pattern="[a-zA-Z]+([a-zA-Z]|\d)*" title="Sin espacios en blanco. Números y letras. No puede empezar por número.">
+			<p id="userok">Este usuario está disponible</p>
+			<p id="usernook">¡Este usuario ya está en uso!</p>
+			<br>
+			Contraseña<br>
+			<input type="password" id="contra1" name="pass" placeholder="tu contraseña" required pattern="^[a-zA-Z]*[a-zA-Z]|\d|-|_" title="Sin espacios en blanco. Letras mayúsculas, minúsculas, números, '-' y '_'">
+			<br>
+			<br>
+			 Repetir contraseña<br>
+			<input id="contra2" type="password" name="pass2" placeholder="repite la contraseña" required>
+			<br>
+			<br>
+			 Nombre completo<br>
+			<input type="text" name="nombrereal" placeholder="tu nombre real" required>
+			<br>
+			<br>
+			 Tu email<br>
+			<input type="email" name="email" placeholder="tu email" >
+			<br>
+			<p></p>
+			<input type="submit" value="¡Regístrame!">
+			<br>
+		</fieldset>
+	</form>
+<footer>
+	&copy;Yolosoft - Ramón Arenal y Alejandro Mayol<br>
+	2015 del Señor<br>
+	<span class="icon-info"></span><a href="acerca.html">Acerca de nosotros</a>
+</footer>
+</body>
+</html>

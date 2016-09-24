@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ruta - YOLOWAY</title>
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="estilos/principal.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="estilos/768.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/fontello.css">
+	<link rel="stylesheet" type="text/css" href="estilos/fontello-codes.css">
+	<link rel="stylesheet" type="text/css" href="estilos/fontello-embedded.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script src="logica/codigo.js"></script>
+</head>
+<body onLoad="mostrarRuta(),creaMenu()">
+<div id="comentado" >
+	<p>¡Comentario subido!</p>
+	<button onclick="llevarARuta()">Volver</button>
+</div>
+<header>
+	<h1>YOLOWAY</h1>
+	<a href="index.html">
+			<img id="head1" src="img/header2.png" alt="cabecera no encontrada"/>
+			<img id="head2" src="img/logo.png" alt="logo no encontrado"/>
+		</a>
+	<div id="cssmenu"></div>
+</header>
+<h2>Información de la ruta</h2>
+<!--<img class="imgruta" width="500" height="500" src="img/1.jpg" alt="prueba">-->
+<br>
+<div class="ruta" id="divRuta">
+	<br>
+	
+</div>
+<section class="slideOculto" id="slide">
+			<img id="imagenSlide" src="imagenes/ruta1.jpg" class="imgSlide" alt="Imagen 1 de la ruta">
+			<button class="submit" onclick="cambiarImgSlide(0)">Anterior</button>
+			<button class="submit" onclick="cambiarImgSlide(1)">Siguiente</button>
+			<button class="submitCerrar" onclick="cambiarSlide()">Cerrar</button>
+</section>
+<h3>Imágenes asociadas</h3>
+<section id="miniFotos" class="miniaturasimagenes">
+</section>
+
+<h2>Últimos comentarios sobre esta ruta</h2>
+<section class="commentsRuta">
+	
+</section>
+<form id="formcomment" onsubmit="sendComment()" method="POST">
+	<fieldset>
+		<legend>Escribe tu comentario</legend>
+		<input type="hidden" name="usuario" value="" >
+		<br>
+		<input type="text" name="titulo"  placeholder=" título">
+		<br>
+		<textarea rows="7" cols="40" name="comentario" maxlength="50" form="formcomment" placeholder="Introduce tu comentario..." ></textarea>
+		<br>
+		<input type="submit" value="Enviar">
+	</fieldset>
+</form>
+<footer>
+
+	&copy;Yolosoft - Ramón Arenal y Alejandro Mayol<br>
+	2015 del Señor<br>
+	<span class="icon-info"></span><a href="acerca.html">Acerca de nosotros</a>
+</footer>
+</body>
+</html>

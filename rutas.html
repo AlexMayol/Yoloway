@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Rutas - YOLOWAY</title>
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="estilos/principal.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="estilos/768.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/fontello.css">
+	<link rel="stylesheet" type="text/css" href="estilos/fontello-codes.css">
+	<link rel="stylesheet" type="text/css" href="estilos/fontello-embedded.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script src="logica/codigo.js"></script>
+
+</head>
+<body onload="creaMenu()">
+<header>
+	<h1>YOLOWAY</h1>
+	<a href="index.html">
+		<img id="head1" src="img/header2.png" alt="logo">
+		<img id="head2" src="img/logo.png" alt="logo">
+	</a>
+	<div id="cssmenu"></div>
+</header>
+<h2>Formulario de búsqueda</h2>
+<form name="formbusq" method="get">
+	<fieldset>
+		<legend>Realiza una búsqueda</legend>
+		<br>Titulo
+		<input type="search" name="btitulo" size=40 autofocus placeholder="Introduce el titulo de la ruta"><br>
+		<br>Recorrido
+		<input type="search" name="brecorrido" size=40 placeholder="Introduce el recorrido de la ruta"><br>
+		<br>Descripción
+		<input type="search" name="bdescripcion" size=40 placeholder="Introduce el descripcion de la ruta"><br>
+		<h4>Fecha</h4>
+		Desde
+		<input type="date" name="bfechaini">
+		Hasta
+		<input type="date" name="bfechafin"><br>
+		<h4>Dificultad</h4>
+		Mínima
+		<select name="bmindificultad">
+			<option>Muy baja</option>
+			<option>Baja</option>
+			<option>Media</option>
+			<option>Alta</option>
+			<option>Muy alta</option>
+		</select>
+		
+		Máxima
+		<select name="bmaxdificultad">
+			<option>Muy baja</option>
+			<option>Baja</option>
+			<option>Media</option>
+			<option>Alta</option>
+			<option>Muy alta</option>
+		</select>
+		<h4>Distancia</h4>
+		Mínima
+		<input type="number" name="bdistanciamin" placeholder="Ej:10">
+		Máxima
+		<input type="number" name="bdistanciamax" placeholder="Ej:20"> <br>
+		<br>Autor
+		<input type="search" name="bautor" size=40  placeholder="Introduce el titulo de la ruta"><br>
+		<br>
+		<input type="button" onClick="getRutas()" name="bsubmit" value="Buscar"><br>
+	</fieldset>
+</form>
+<form onChange="ordenarRutas()">
+	<label for="titulo">Titulo</label>
+	<input type="radio" name="radPatron" id="titulo" value="Titulo" checked>
+	 <label for="fecha">Fecha</label>
+	<input type="radio" name="radPatron"  id="fecha" value="Fecha">
+	 <label for="distancia">Distancia</label>
+	<input type="radio" name="radPatron" id="distancia"  value="Distancia">
+	 <label for="dificultad">Dificultad</label>
+	<input type="radio" name="radPatron"  id="dificultad" value="Dificultad">
+	<br>
+	 <label for="asc">Ascendente</label>
+	<input type="radio" name="radAscdesc"  id="asc" value="Ascendente" checked>
+	 <label for="desc">Descendente</label>
+	<input type="radio" name="radAscdesc"  id="desc" value="Descendente">
+</form>
+<h2>Resultados de la búsqueda</h2>
+<section class="sectionRutas">
+	
+</section>
+<footer>
+	&copy;Yolosoft - Ramón Arenal y Alejandro Mayol<br>
+	2015 del Señor<br>
+	<span class="icon-info"></span><a href="acerca.html">Acerca de nosotros</a>
+</footer>
+</body>
+</html>
